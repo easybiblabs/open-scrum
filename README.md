@@ -21,7 +21,7 @@ Sprint 07 (2014-08-26);closed;1907;2
 Sprint 07 (2014-08-26);closed;1857;0.5
 ```
 
-```
+```sh
 $ ./bin/runner points -s open "easybib/issues" "Sprint 07 (2014-08-26)"
 milestone;state;number;point
 Sprint 07 (2014-08-26);open;2043;1
