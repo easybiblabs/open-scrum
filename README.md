@@ -1,1 +1,1 @@
-Â# Tooling for the scrum process
+# Tooling for the scrum process
