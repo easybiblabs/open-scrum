@@ -1,0 +1,11 @@
+#!/usr/bin/env php
+<?php
+define('ROOT_DIR', dirname(__DIR__));
+require ROOT_DIR . '/vendor/autoload.php';
+
+use ImagineEasy\OpenScrum;
+
+$application = new OpenScrum\Application();
+$application->setName('open-scrum');
+$application->add(new OpenScrum\Commands\Points());
+$application->run();
