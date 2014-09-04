@@ -2,7 +2,8 @@
     "name": "easybib/open-scrum",
     "description": "Tooling for Imagine Easy's scrum process!",
     "require": {
-        "guzzle/http": "@stable"
+        "guzzle/http": "@stable",
+        "symfony/console": "2.5.*"
     },
     "license": "BSD-2-Clause",
     "authors": [
