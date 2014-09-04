@@ -1,0 +1,15 @@
+{
+    "name": "easybib/open-scrum",
+    "description": "Tooling for Imagine Easy's scrum process!",
+    "require": {
+        "guzzle/http": "@stable"
+    },
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "Till Klampaeckel",
+            "email": "till@php.net"
+        }
+    ],
+    "minimum-stability": "stable"
+}
