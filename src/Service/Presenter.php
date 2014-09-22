@@ -3,9 +3,11 @@ namespace ImagineEasy\OpenScrum\Service;
 
 class Presenter
 {
-    private $issues;
+    private $delimiter = ',';
 
     private $filtered = [];
+
+    private $issues;
 
     public function __construct(array $issues)
     {
@@ -32,9 +34,34 @@ class Presenter
     }
     public function presentCSV($milestone, $state)
     {
-        echo "milestone;state;number;point" . PHP_EOL;
+        echo $this->createRow(
+            "milestone",
+            "state",
+            "number",
+            "point"
+        ) . PHP_EOL;
+
         foreach ($this->filtered as $number => $point) {
-            echo "$milestone;$state;$number;$point" . PHP_EOL;
+            echo $this->createRow(
+                $milestone,
+                $state,
+                $number,
+                $point
+            ) . PHP_EOL;
         }
+    }
+
+    private function createRow($milestone, $state, $number, $point)
+    {
+        return sprintf(
+            '"%s"%s"%s"%s"%s"%s"%s"',
+            $milestone,
+            $this->delimiter,
+            $state,
+            $this->delimiter,
+            $number,
+            $this->delimiter,
+            $point
+        );
     }
 }
